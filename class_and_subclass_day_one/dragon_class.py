@@ -6,7 +6,7 @@
 from creature_class import Creature
 
 class Dragon(Creature):
-    pass    
+    
 
 
     def breathe_fire(self):
@@ -14,6 +14,6 @@ class Dragon(Creature):
 
     
     def status(self):
-        return print(f"The Mighty! {self.name} has {self.hp}HP!")
+        print(f"The Mighty! {self.name} has {self.hp} HP!")
 
 
