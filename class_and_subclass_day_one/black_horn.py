@@ -6,11 +6,12 @@ from unicorn_class import Unicorn
 
 black = Unicorn("Black Horn The Unicorn", 12)
 
-black.status()
+#black.status()
 
-black.take_damage(6)
+#black.take_damage(6)
 
-black.heal(7)
+#black.heal(2)
 
-black.heal(10)
+#black.heal(10)
 
+#black.heal(10)
