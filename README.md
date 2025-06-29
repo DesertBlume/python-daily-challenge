@@ -1,7 +1,3 @@
-Alright — here’s your update formatted cleanly for a `.md` file, no fluff:
-
----
-
 # Daily-Challenge
 
 The **Daily-Challenge** series is entirely my own work, created to sharpen my technical skills through consistent practice. While many of my earlier workflows in other repos were built with substantial help from generative AI, the core ideas, troubleshooting, and persistence were all mine — and that gave me a broad perspective on various tools and languages. Now that I can see the whole forest, this repo is about studying each individual tree.
