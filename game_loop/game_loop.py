@@ -21,11 +21,11 @@ while True and fighter.hp > 0:
 3. Check status
 4. Quit!
 """)
-    #try:
-     #   choice = int(untype_choice)
-    #except ValueError:
-     #   print(" input 1 2 3")
-    choice = int(untype_choice)
+    try:
+        choice = int(untype_choice)
+    except ValueError:
+        print(" type cast failed input 1 2 3")
+        continue
     if choice == 1:
         print(f" You fight and take some damage")
         fighter.fight()
