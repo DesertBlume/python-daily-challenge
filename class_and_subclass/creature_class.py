@@ -2,13 +2,16 @@
 
 # Fantasy Creature Class
 
+import random
 class Creature:
     def __init__(self, name, hp):
         is_alive = True
         self.is_alive = is_alive
         self.name = name
         self.hp = hp
-        if self.hp = 0:
+        max_hp = self.hp
+        self.max_hp = max_hp
+        if self.hp == 0:
             self.is_alive = False
 
 
@@ -34,3 +37,25 @@ class Creature:
 {self.name}'s HP is {self.hp} points.
                          """)
         return self.hp
+
+    def fight(self):
+        self.hp -= random.randint(1, 5)
+        return self.hp
+
+
+
+    def rest(self):
+        self.hp += random.randint(1, 3)
+        if self.hp >= self.max_hp:
+            self.hp = self.max_hp
+            print(f" {self.name} healed up to the max! HP is at {self.hp} points!")
+        else:
+            print(f" {self.name} healed to {self.hp} HP points!")
+        return self.hp
+
+
+
+
+
+
+
