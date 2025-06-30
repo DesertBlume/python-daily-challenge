@@ -1,6 +1,9 @@
 ## June 28th, 2025
 
-Built three classes: one parent class and two child classes. Each child added its own unique method, and I practiced overriding a method inherited from the parent. I also got different class instances to interact — a first small step toward more complex behavior.
+* Built one parent class and two child classes.
+* Added unique methods to each child class.
+* Practiced method overriding.
+* Got different class instances to interact. First step toward more complex behavior.
 
 ---
 
