@@ -37,7 +37,10 @@ while True and fighter.hp > 0:
             else:
                 print(f"{goblin.name} gets the first hit on {fighter.name}!")
                 goblin.fight(fighter)
-                fighter.fight(goblin)
+                if fighter.hp <= 0:
+                    pass
+                else:
+                    fighter.fight(goblin)
 
         else:
             print(f"{goblin.name} is dead. There is no thing for you to fight!")

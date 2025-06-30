@@ -17,10 +17,21 @@ Built three classes: one parent class and two child classes. Each child added it
 
 ---
 
-## Current Goal
+## June 30th, 2025
 
-Expand the parent class logic so that if certain conditions are met, an instance can deactivate itself and refuse to run its methods until something external reactivates it. I’m using fantasy elements to keep it fun and to inch closer to finally building that video game I’ve always dreamed about.
+* Created an enemy class for my player to fight.
+* Practiced controlling game logic with `if` statements: if an enemy’s HP drops to 0, it can’t be attacked again and shows a death message instead.
+* Added basic checks to prevent dead enemies from calling any methods — fragile but working for now.
+* Simulated turn-based combat inside a `while` loop.
+* Simplified and modularized methods: one method can now call another cleanly.
+* Practiced clean logic flow for combat turns and HP updates.
 
 ---
 
+## Current Goals
 
+* Add a save/load feature to store the player’s state and attributes, including an inventory system to track loot.
+* Make the death check logic more robust and less error-prone.
+* Expand the parent class so instances can deactivate themselves and stay inactive until reactivated. 
+
+---
