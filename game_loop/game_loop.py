@@ -7,14 +7,14 @@
 # Start time: 10:05 am 
 # End time: end
 from class_and_subclass.player_class import Player
+from class_and_subclass.goblin_class import Goblin
 import random
+turn = 1
 hp = 10
 name = input(" Welcome adventurer! what is your name? ")
-
+goblin = Goblin("Gorak the Goblin", 50)
 fighter = Player(name, hp)
 while True and fighter.hp > 0:
-    fight_dice = random.randint(1, 5)
-    rest_dice = random.randint(1, 3)
     untype_choice = input(f"""
 1. Fight!
 2. Rest!
@@ -27,9 +27,20 @@ while True and fighter.hp > 0:
         print(" type cast failed input 1 2 3")
         continue
     if choice == 1:
-        print(f" You fight and take some damage")
-        fighter.fight()
-        print(f"{fighter.name}'s HP is now {fighter.hp}")
+        if goblin.hp > 0:
+            if turn == 1:
+                print(f"{fighter.name} gets the first hit on {goblin.name}!")
+                fighter.fight(goblin)
+
+                if goblin.hp > 0:
+                    goblin.fight(fighter)
+            else:
+                print(f"{goblin.name} gets the first hit on {fighter.name}!")
+                goblin.fight(fighter)
+                fighter.fight(goblin)
+
+        else:
+            print(f"{goblin.name} is dead. There is no thing for you to fight!")
     elif choice == 2:
         print(f" Sometimes you just have to take a break")
         fighter.rest()
@@ -40,6 +51,11 @@ while True and fighter.hp > 0:
         break
     else:
         print(" pick one of the numbers in the options please")
+
+    if turn == 1:
+        turn = 2
+    else:
+        turn = 1
     
 if fighter.hp <= 0:
     print(f" {fighter.name} died. what a fool!")

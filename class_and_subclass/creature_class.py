@@ -29,7 +29,7 @@ class Creature:
         if self.hp <= 0:
             self.hp = 0
             print(f"""
-{self.name} has died! it's HP is {self.hp}
+{self.name} has died!
                   """)
         else:
                   print(f"""
@@ -38,8 +38,14 @@ class Creature:
                          """)
         return self.hp
 
-    def fight(self):
-        self.hp -= random.randint(1, 5)
+    def fight(self, target):
+        amount = random.randint(1, 5)
+        print(f"""
+{self.name} has attacked {target}
+              """)
+        target.take_damage(amount)
+        if target.hp <= 0:
+            print(f"{self.name} has slain {target}")
         return self.hp
 
 
